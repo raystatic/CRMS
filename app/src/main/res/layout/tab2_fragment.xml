@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_crId_tab1"
+                android:hint="Criminal Id (CrID)"
+                android:textColor="#fff"
+                android:inputType="number"
+                android:textColorHint="@color/lightgrey"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_name_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Name Of Criminal"
+                android:textColorHint="@color/lightgrey"                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_orgname_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Organisation Name"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_date_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Date and time of Arresting"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:inputType="datetime"
+                android:drawableLeft="@drawable/ic_action_person"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_crime_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Crime type"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_officer_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Case Incharge Officer"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_firno_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="FIR number (if any)"
+                android:textColorHint="@color/lightgrey"                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_firdate_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Date of FIR (if any)"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_age_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Date of birth"
+                android:inputType="date"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_exciletime_tab1"
+                android:layout_alignParentRight="true"
+                android:hint="Period of excile"
+                android:textColorHint="@color/lightgrey"
+                android:textColor="#fff"
+                android:drawableLeft="@drawable/ic_action_person"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

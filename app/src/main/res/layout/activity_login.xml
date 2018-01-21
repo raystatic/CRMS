@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        tools:context="com.example.rahul.crmsample.LoginActivity">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:id="@+id/img_login"
+            android:src="@drawable/hancuffs3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_email_login"
+            android:textColorHint="@color/lightgrey"
+            android:textColor="#fff"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:layout_below="@id/img_login"
+            android:hint="Enter Email"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_pass_login"
+            android:textColorHint="@color/lightgrey"
+            android:textColor="#fff"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:layout_marginTop="25dp"
+            android:hint="Enter Password"
+            android:layout_below="@+id/et_email_login"
+            />
+
+        <Button
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login_login"
+            android:layout_below="@+id/et_pass_login"
+            android:layout_marginTop="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_round"
+            android:textColor="#000"
+            android:text="Login"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_register_login"
+            android:layout_below="@+id/btn_login_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Register Here"
+            android:textColor="#fff"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

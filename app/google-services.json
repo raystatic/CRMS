@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "420314000479",
+    "firebase_url": "https://crmsample-7a26e.firebaseio.com",
+    "project_id": "crmsample-7a26e",
+    "storage_bucket": "crmsample-7a26e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420314000479:android:4be2aea25c04e8b5",
+        "android_client_info": {
+          "package_name": "com.example.rahul.crmsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420314000479-uaok6ghr78jen6phpscagiaca21chahr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rahul.crmsample",
+            "certificate_hash": "80f2253dd82a15edcaf61c91e36a00121e1d29b0"
+          }
+        },
+        {
+          "client_id": "420314000479-hhesl74n2bbng5toomtdrf0uduimsbg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpSswHPEP6b_0CRgZE6JiFHhw8pZK0LT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420314000479-hhesl74n2bbng5toomtdrf0uduimsbg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
