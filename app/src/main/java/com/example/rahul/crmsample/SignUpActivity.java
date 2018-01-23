@@ -16,7 +16,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.dd.CircularProgressButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,11 +24,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUpActivity extends AppCompatActivity {
 
     EditText editText_repass, editText_uname, editText_pass;
-    //CircularProgressButton circularProgressButton;
     Button button;
     FirebaseAuth firebaseAuth;
     TextView textView;
-    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +43,10 @@ public class SignUpActivity extends AppCompatActivity {
         editText_uname=(EditText)findViewById(R.id.et_email_signup);
         editText_pass=(EditText)findViewById(R.id.et_pass_signup);
         editText_repass=(EditText)findViewById(R.id.et_repass_signup);
-        //circularProgressButton=(CircularProgressButton)findViewById(R.id.btn_createaccount_signup)
         button=(Button)findViewById(R.id.btn_signup_signup);
         textView=(TextView)findViewById(R.id.tv_login_signup);
 
         textView.setText(Html.fromHtml("<u>Already a user? Login here</u>"));
-
-        progressBar=(ProgressBar)findViewById(R.id.progressbar_signup);
-
-        progressBar.setVisibility(View.GONE);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,51 +58,12 @@ public class SignUpActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                if (checkEmail(editText_uname.getText().toString()) && countText(editText_pass.getText().toString())>=8 && textmatched(editText_repass.getText().toString(),editText_pass.getText().toString()))
-//                {
-//
-                   // signUp(editText_uname.getText().toString(),editText_pass.getText().toString());
-//                }
-//                else
-//                {
-//                    signupfailed();
-//                }
-                initialiseProgressLoader();
-
-
+                signUp(editText_uname.getText().toString(),editText_pass.getText().toString());
             }
         });
 
-
     }
 
-
-    public void initialiseProgressLoader()
-    {
-
-        if (progressBar.getProgress()==-1)
-        {
-            progressBar.setVisibility(View.GONE);
-        }
-
-        else
-        {
-            progressBar.setVisibility(View.VISIBLE);
-            progressBar.setIndeterminate(true);
-            progressBar.setProgress(30);
-        }
-
-        //button.setVisibility(View.GONE);
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                signUp(editText_uname.getText().toString(),editText_pass.getText().toString());
-
-            }
-        },5000);
-    }
 
     public void signupfailedcheck()
     {
@@ -119,9 +72,9 @@ public class SignUpActivity extends AppCompatActivity {
         {
             signupdialog("Invalid Username!");
         }
-        else if(countText(editText_pass.getText().toString())<8)
+        else if(countText(editText_pass.getText().toString())<6)
         {
-            signupdialog("Password must be at least of 8 characters!");
+            signupdialog("Password must be at least of 6 characters!");
         }
         else if(!textmatched(editText_repass.getText().toString(),editText_pass.getText().toString()))
         {
@@ -131,7 +84,6 @@ public class SignUpActivity extends AppCompatActivity {
         {
             signupdialog("Attempt to Sign Up has failed. Please fill the fields carefully as instructed");
         }
-        progressBar.setProgress(-1);
     }
 
     public void signUp(String email, String password)
@@ -144,20 +96,11 @@ public class SignUpActivity extends AppCompatActivity {
                         {
                             Toast.makeText(getApplicationContext(),"creataUser:success",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),PostSignUpActivity.class));
-        //                    circularProgressButton.setProgress(100);
-                            //button1.setText("Sign Up Success!");
-                           // button.setVisibility(View.VISIBLE);
-                           // progressBar.setProgress(100);
-
                         }
                         else
                         {
                             Toast.makeText(getApplicationContext(),"creataUser:failure|"+task.getException(),Toast.LENGTH_SHORT).show();
-          //                  circularProgressButton.setProgress(-1);
-                           // button1.setText("Sign Up Failure!");
-                            //progressBar.setProgress(-1);
-                            //button.setVisibility(View.VISIBLE);
-                            signupdialog("Cannot Sign In now. Please try again!");
+                            signupfailedcheck();
 
                         }
                     }
@@ -214,7 +157,5 @@ public class SignUpActivity extends AppCompatActivity {
         AlertDialog alertDialog=builder.create();
         alertDialog.show();
     }
-
-
 
 }

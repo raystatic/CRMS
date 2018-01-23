@@ -50,7 +50,7 @@
             android:textColorHint="@color/lightgrey"
             android:textColor="#fff"
             android:drawableLeft="@drawable/ic_action_name"
-            android:hint="Enter Password  (Atleast 8 characters)"
+            android:hint="Enter Password  (Atleast 6 characters)"
             android:inputType="textPassword"
             android:layout_below="@+id/et_email_signup"
             android:layout_marginTop="25dp"/>
@@ -85,14 +85,6 @@
             android:layout_below="@+id/btn_signup_signup"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"/>
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressbar_signup"
-            android:layout_marginTop="339dp"
-            android:layout_centerHorizontal="true"/>
-
 
     </RelativeLayout>
 
